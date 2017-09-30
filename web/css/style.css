@@ -1,0 +1,128 @@
+body {
+    background-color: #e8e8e8;
+}
+
+.background-image {
+    background: linear-gradient(rgba(220, 231, 117, 1), rgba(220, 231, 117, 1)), url(tecnologia.png);
+    /*background-image: url(tecnologia.png);*/
+}
+
+.container-products {
+    margin: 0px 100px;
+}
+
+.brand-logo {
+    margin: 0px 0px 0px 20px;
+}
+
+nav ul li a {
+    color: black;
+}
+
+#card-entretenimiento h3 {
+    color: #3e2723;
+}
+
+#card-entretenimiento h5 {
+    color: #795548;
+}
+
+#card-tecnologia h3 {
+    color: #ffd54f;
+}
+
+#card-tecnologia h5 {
+    color: white;
+}
+
+#card-belleza h3 {
+    color: #ffd54f;
+}
+
+#card-belleza h5 {
+    color: white;
+}
+
+#card-infantil h3 {
+    color: #3e2723;
+}
+
+#card-infantil h5 {
+    color: #795548;
+}
+
+#principal-nav a {
+    color: black;
+}
+
+#card-hogar h3 {
+    color: #3e2723;
+}
+
+#card-hogar h5 {
+    color: #795548;
+}
+
+#first-photo-slides {
+    /*background: linear-gradient(rgba(62, 39, 35, 0.9), rgba(62, 39, 35, 0.1)), url(slides-foto1.jpg);*/
+    background-image: url(slides-foto1.jpg);
+}
+
+#second-photo-slides {
+    background-image: url(slides-foto2.jpg);
+}
+
+#third-photo-slides {
+    background-image: url(slides-foto3.jpg);
+}
+
+#fourth-photo-slides {
+    background-image: url(slides-foto4.jpg);
+}
+
+.parallax-container {
+    height: 400px;
+    width: 100%;
+}
+
+#gender-options a.active {
+    border-bottom: 2px solid black;
+    color: black;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 10px;
+}
+
+.grid-item {
+    width: 300px;
+}
+
+.grid-item--width2 {
+    width: 350px;
+}
+
+.grid-item--width3 {
+    width: 280px;
+}
+
+.grid .card{
+    margin: 10px;
+    background-color: #f9fbe7;
+}
+
+#primera .pinned,
+#segunda .pinned {
+    position: relative;
+    z-index: 997;
+    height: 64px;
+}
+
+.carousel-slider .card {
+    margin: 60px 20px 0px 0px;
+}
+
+.block {
+    padding: 0px 400px;
+}
