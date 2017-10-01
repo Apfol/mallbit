@@ -1,5 +1,5 @@
-create database proyecto;
-use proyecto;
+create database mallbit;
+use mallbit;
 
 create table cliente( IDCliente int(11) not null auto_increment, Nombre varchar(50) not null, Apellido varchar(50) not null,FechaNacimiento date not null, Correo varchar(100) not null, Identificacion int(11) not null unique, Telefono int(10) not null, IDGenero int(11), Primary Key(IDCliente));
 create table genero(IDGenero int(11) not null auto_increment, Tipo varchar(100) not null, Primary Key(IDGenero));
