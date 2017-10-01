@@ -39,20 +39,7 @@
         <div class="block">
             <div class="card-panel">
                 <form action="ControladorCliente" method="post">
-<<<<<<< HEAD
-                    <input type="hidden" name="instruccion" value="validarCliente">
-                    <div class="row">
-                        <div class="col s10">
-                            <p style="font-size: 30px" id="titleis">Inicio de sesión</p>
-                            <p style="font-size: 15px" id="subtitleis">Acceder a MallBIT</p><br>
-                        </div>
-                        <div class="col s2">
-                            <i class="material-icons left" id="personas">people</i>
-                        </div>
-                    </div>
-=======
                     <input type="hidden" name="instruccion" value="buscarClienteDDBB"/>
->>>>>>> parent of 1b1c791... Cambios mayores a la Interfaz de Inicio de Sesion
                     <div class="input-field">
                         <input id="usuario" name="usuario" type="text" class="validate">
                         <label for="usuario">Usuario</label>
