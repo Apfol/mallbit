@@ -1,9 +1,11 @@
-﻿package com.mallbit.cliente;
+package com.mallbit.cliente;
+
 
 import java.util.*;
 import java.util.Date;
 
-import com.mallbit.Conexion.ConexionDB;
+import com.mallbit.cliente.Cliente;
+import com.mallbit.conexiondb.ConexionDB;
 
 import java.sql.*;
 import java.text.SimpleDateFormat;

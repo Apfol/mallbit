@@ -1,5 +1,9 @@
-﻿package com.mallbit.cliente;
+package com.mallbit.cliente;
 
+
+import com.mallbit.cliente.Cliente;
+import com.mallbit.cliente.ModeloCliente;
+import com.mallbit.cliente.ModeloCliente;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -90,6 +94,7 @@ public class ControladorCliente extends HttpServlet {
             
             //Se verifica si existe otro cliente con ese Usuario
             List<Cliente> clientes = modeloCliente.obtenerClientesDB();
+            
             for (Cliente cliente : clientes) {
                 if (cliente.getUsuario().equals(usuario)) {
                     existe = "existe";

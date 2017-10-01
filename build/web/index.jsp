@@ -1,13 +1,7 @@
-<%-- 
-    Document   : pagina principal
-    Created on : Sep 21, 2017, 2:27:25 PM
-    Author     : Andres Ramos
---%>
-
 <%@page import="com.mallbit.cliente.Cliente"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
     <head>
         <!--Import Google Icon Font-->
@@ -20,7 +14,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>MallBIT compra y vende</title>
+        <title>MallBIT - Compra y Vende</title>
     </head>
 
     <body>
@@ -34,16 +28,14 @@
                             <ul id="nav-mobile" class="right hide-on-med-and-down">
                                 <% Cliente cliente = (Cliente) session.getAttribute("CLIENTE_SESSION"); %>
                                 <% if (cliente == null) { %>
-                                <li><a href="iniciar-sesion.jsp"><i class="material-icons left">people</i>Iniciar sesión</a></li>
-                                <li><a href="ControladorGenero"><i class="material-icons left">people</i>Registro</a></li>
+                                <li><a href="iniciar-sesion.jsp"><i class="material-icons left">people</i>Acceder</a></li>
                                 <li><a href="#"><i class="material-icons left">local_shipping</i>Vender</a></li>
                                 <li><a href="#"><i class="material-icons left">security</i>Administrar</a></li>
                                 <li><a id="search-nav-button" href="#search-nav"><i class="material-icons left">search</i>Buscar</a></li>
                                     <%} else {%>
                                 <li><a id="search-nav-button" href="#search-nav"><i class="material-icons left">search</i>Buscar</a></li>
-                                <li><a href="index.jsp"><i class="material-icons left">people</i><%= cliente.getNombre()%></a></li>
-                                <li><a href="sass.html"><i class="material-icons left">local_shipping</i>Vender</a></li>
-                                <li><a href="badges.html"><i class="material-icons left">security</i>Administrar</a></li>
+                                    <li><a href="index.jsp"><i class="material-icons left">people</i><%= cliente.getNombre()%></a></li>
+                                <li><a href="sass.html"><i class="material-icons left">shopping_cart</i>Mis Compras</a></li>
                                 <li><a href="index.jsp" onclick="<% session.invalidate(); %>"><i class="material-icons left">exit_to_app</i>Salir</a></li>
                                     <% }%>
                             </ul>
@@ -644,6 +636,13 @@
 
 
         <!--Import jQuery before materialize.js-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script src="js/script.js"></script>
+
+    </body>
+
+</html> <!--Import jQuery before materialize.js-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script src="js/script.js"></script>

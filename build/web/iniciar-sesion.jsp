@@ -1,9 +1,3 @@
-<%-- 
-    Document   : iniciar-sesion
-    Created on : Sep 28, 2017, 11:27:09 PM
-    Author     : Andres Ramos
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,60 +9,71 @@
         <link type="text/css" rel="stylesheet" href="css/materialize.css"/>
 
         <meta charset="UTF-8">
-        <title>Document</title>
+        <title>Iniciar Sesión</title>
     </head>
 
     <body class="lime lighten-2">
-        <nav class="pushpin-nav z-depth-0" data-target="primera">
-            <div class="nav-wrapper lime lighten-2">
-                <div class="col s12">
-                    <div id="principal-nav">
-                        <a href="index.jsp" class="brand-logo"><i class="material-icons">shopping_basket</i>MallBIT</a>
-                        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">casa</i></a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
-        <div class="center-align">
-            <h3>¡Hola! ingresa tu correo y contraseña</h3>
+        <div class="nav-wrapper lime darken-1" id="isbl">
+            <center><a href="index.jsp" class="brand-logo"><i class="material-icons">shopping_basket</i> MallBIT</a></center>
         </div>
-
-        <br>
-
+        
         <div class="block">
             <div class="card-panel">
                 <form action="ControladorCliente" method="post">
-                    <input type="hidden" name="instruccion" value="buscarClienteDDBB"/>
+                    <input type="hidden" name="instruccion" value="validarCliente">
+                    <div class="row">
+                        <div class="col s10">
+                            <p style="font-size: 30px" id="titleis">Inicio de sesión</p>
+                            <p style="font-size: 15px" id="subtitleis">Acceder a MallBIT</p><br>
+                        </div>
+                        <div class="col s2">
+                            <i class="material-icons left" id="personas">people</i>
+                        </div>
+                    </div>
                     <div class="input-field">
-                        <input id="usuario" name="usuario" type="text" class="validate">
+                        <input id="usuario" type="text" name="usuario" class="validate">
                         <label for="usuario">Usuario</label>
                     </div>
 
                     <div class="input-field">
-                        <input id="contraseña" name="password" type="password" class="validate">
+                        <input id="contraseña" type="password" name="password" class="validate">
                         <label for="contraseña">Contraseña</label>
                     </div>
                     <div class="center-align">
-                        <button class="btn waves-effect waves-light lime lighten-2 black-text" type="submit" name="action">
-                            Iniciar Sesión
-                        </button>
+                        <%
+                            
+                        %>
+                        <button class="waves-effect waves-light btn lime lighten-2 black-text" type="submit">Iniciar sesión</button>
                     </div>
                 </form>
-                <% String encontro =  (String) request.getAttribute("ENCONTRO"); %>
-                <% if (encontro != null) {%>
-                <div class="center-align">
-                    <p>Usuario no encontrado</p>
-                </div>
-                <% }%>
                 <br>
-                <div class="center-align">
-                    <a href="ControladorGenero">Crear cuenta</a>
+                <% String estado =  (String) request.getAttribute("RESULTADO"); %>
+                <% if (estado == "incorrecto") {%>
+                    <div class="center-align">
+                        <style>
+                            #usuario,#contraseña{
+                                border-color: red;
+                            }
+                        </style>
+                        <p style="color: red">Usuario o Contraseña Incorrectos</p>
+                    </div>
+                <% } else {%>
+                <% if (estado == "indefinido") {%>
+                        <style>
+                            #register{
+                                font-size: 18px;
+                                text-decoration: underline;
+                            }
+                        </style>
+                <% }%>
+                <% }%>
+                <div class="center-align" id="register">
+                    ¿No tienes una cuenta?<a href="registro-cliente.jsp"> Regístrate</a>
                 </div>
+                <br>
 
             </div>
         </div>
-
 
 
         <!--Import jQuery before materialize.js-->

@@ -26,7 +26,7 @@
                             <p style="font-size: 30px" id="titleis">Inicio de sesión</p>
                             <p style="font-size: 15px" id="subtitleis">Acceder a MallBIT</p><br>
                         </div>
-                        <div class="col s1">
+                        <div class="col s2">
                             <i class="material-icons left" id="personas">people</i>
                         </div>
                     </div>

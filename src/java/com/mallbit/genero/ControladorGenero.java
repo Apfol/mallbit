@@ -39,7 +39,6 @@ public class ControladorGenero extends HttpServlet {
             //Agregar clientes al request
             request.setAttribute("LISTAGENEROS", generos);
             
-            
             //Enviar request a la página que se desea
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/registro-cliente.jsp");
             requestDispatcher.forward(request, response);
