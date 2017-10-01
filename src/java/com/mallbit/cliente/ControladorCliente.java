@@ -93,7 +93,7 @@ public class ControladorCliente extends HttpServlet {
             String existe = "";
             
             //Se verifica si existe otro cliente con ese Usuario
-            List<Cliente> clientes = modeloCliente.obtenerClientesDB();
+            List<Cliente> clientes = modeloCliente.obtenerClientesDDBB();
             
             for (Cliente cliente : clientes) {
                 if (cliente.getUsuario().equals(usuario)) {
