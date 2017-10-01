@@ -83,7 +83,7 @@
                                 <option value="" disabled selected>Género</option>
                                 <% List<Genero> generos = (List<Genero>) request.getAttribute("LISTAGENEROS"); %>
                                 <% for (Genero g : generos) {%>
-                                <option value="<%= g.getId()%>"><%= g.getNombre()%></option>
+                                <option value="<%= g.getId()%>"><%= g.getTipo()%></option>
                                 <% }%>
                             </select>
                         </div>

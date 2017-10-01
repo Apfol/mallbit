@@ -39,10 +39,10 @@ public class ModeloGenero {
 
         //Recorrer resultador de la sentencia
         while (resultSet.next()) {
-            int id = resultSet.getInt("id_genero"); //parte entre comillas va exactamente el nombre del columna SQL
-            String nombre = resultSet.getString("nombre");
+            int id = resultSet.getInt("IDGenero"); //parte entre comillas va exactamente el nombre del columna SQL
+            String tipo = resultSet.getString("tipo");
 
-            generos.add(new Genero(id, nombre));
+            generos.add(new Genero(id, tipo));
 
         }
         return generos;

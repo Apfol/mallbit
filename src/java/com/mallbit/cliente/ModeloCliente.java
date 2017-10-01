@@ -73,7 +73,7 @@ public class ModeloCliente {
 
         //Crear sentencia SQL y statement
         String sentenciaSQL = "INSERT INTO cliente "
-                + "(nombre,apellido,correo,usuario,contraseña,fecha_nacimiento,id_genero) VALUES (?,?,?,?,?,?,?)";
+                + "(Nombre,Apellido,Correo,Usuario,Contraseña,FechaNacimiento,IDGenero) VALUES (?,?,?,?,?,?,?)";
         preparedStatement = connection.prepareStatement(sentenciaSQL);
         
         // pasar valores del objeto cliente a la sentenciaSQL

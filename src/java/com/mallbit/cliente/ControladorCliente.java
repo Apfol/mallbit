@@ -114,7 +114,7 @@ public class ControladorCliente extends HttpServlet {
             requestDispatcher.forward(request, response);
 
         } catch (IOException | NumberFormatException | SQLException | ServletException ex) {
-
+            ex.getMessage();
         }
     }
 
@@ -134,7 +134,6 @@ public class ControladorCliente extends HttpServlet {
                     requestDispatcher.forward(request, response);
                 }
             }
-
             if (encontroUsuario.equals("no")) {
                 request.setAttribute("ENCONTRO", "no");
                 RequestDispatcher requestDispatcher = request.getRequestDispatcher("/iniciar-sesion.jsp");
